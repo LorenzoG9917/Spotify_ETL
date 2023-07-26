@@ -1,0 +1,12 @@
+<script>
+    // Extract the access token from the URL fragment
+    const fragment = window.location.hash.substring(1);
+    const params = new URLSearchParams(fragment);
+    const accessToken = params.get('access_token');
+
+    // Make an AJAX request to your Flask server to send the access token
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', '/process_token');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify({ access_token: accessToken }));
+</script>

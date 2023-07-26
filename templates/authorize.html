@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Authorization Page</title>
+    <script>
+        const clientId = '{{client_id}}';
+        const redirectUri = '{{redirect_uri}}';
+        const scope = '{{scope}}';
+        const state = '{{state}}';
+
+        const authUrl = `https://accounts.spotify.com/authorize?response_type=token&client_id=${clientId}&scope=${scope}&redirect_uri=${redirectUri}&state=${state}`;
+
+        // Ejecutar la redirección automáticamente al cargar la página
+        window.onload = function() {
+            window.location.href = authUrl;
+        };
+    </script>
+</head>
+<body>
+    <h1>Authorization Page</h1>
+    <p>Redireccionando automáticamente...</p>
+</body>
+</html>
