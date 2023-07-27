@@ -31,12 +31,21 @@ def callback():
 @app.route('/process_token', methods=['POST'])
 def process_token():
     access_token = request.json.get('access_token')
-    print(access_token)
 
-    # Process the access token as needed
-    # ...
+    # Store the access_token in a file for later use
+    with open('access_token.txt', 'w') as f:
+        f.write(access_token)
+    
+    shutdown_server()
 
     return access_token
+
+
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
 
 
 if __name__ == '__main__':
