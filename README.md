@@ -19,7 +19,7 @@ A continuación, se detallan los pasos para ejecutar la aplicación:
 Clona este repositorio en tu máquina local utilizando el siguiente comando:
 
 ```bash
-git clone <URL_del_repositorio>
+git clone https://github.com/LorenzoG9917/Spotify_ETL.git
 ```
 ### Paso 2: Instalar Dependencias
 ```bash
