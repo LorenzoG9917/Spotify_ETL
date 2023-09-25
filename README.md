@@ -21,24 +21,32 @@ Clona este repositorio en tu máquina local utilizando el siguiente comando:
 ```bash
 git clone https://github.com/LorenzoG9917/Spotify_ETL.git
 ```
-### Paso 2: Instalar Dependencias
+
+### Paso 2: Crear y activar ambiente virtual
+```bash
+python -m venv env
+env/Scripts/activate
+```
+
+### Paso 3: Instalar Dependencias
 ```bash
 pip install -r requirements.txt
 ```
-### Paso 3: Configuración
+
+### Paso 4: Configuración
 - Abre el archivo flask_server.py y proporciona tu Client ID de Spotify en la variable client_id. Este servidor Flask se utiliza para obtener el token de acceso de Spotify.
 
-### Paso 4: Ejecutar el Servidor Flask
+### Paso 5: Ejecutar el Servidor Flask
 ```bash
 python flask_server.py
 ```
 Esto abrirá automáticamente una ventana del navegador para autorizar la aplicación en Spotify(debes inicar sesión con tu cuenta de Spotifiy). El token de acceso se guardará en un archivo llamado access_token.txt.
 
-###  Paso 5: Obtener y Cargar los Datos
+###  Paso 6: Obtener y Cargar los Datos
 
 Ejecuta el script spotify_api.py. Este script obtendrá datos de las canciones reproducidas en las últimas 24 horas utilizando el token de acceso. Los datos se procesarán y se almacenarán en una base de datos PostgreSQL.
 
-### Paso 6: Verificar la Base de Datos
+### Paso 7: Verificar la Base de Datos
 Puedes verificar la base de datos para asegurarte de que los datos se hayan cargado correctamente.
 
 ## Agradecimientos
