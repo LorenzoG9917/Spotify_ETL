@@ -1,7 +1,9 @@
 import random
 import string
-from flask import Flask, redirect, request, render_template, jsonify
+from flask import Flask, request, render_template
 import webbrowser
+#import pyautogui
+
 
 
 app = Flask(__name__)
@@ -37,7 +39,6 @@ def process_token():
         f.write(access_token)
     
     shutdown_server()
-
     return access_token
 
 

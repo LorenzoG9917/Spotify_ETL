@@ -73,7 +73,8 @@ def check_if_valid_data(df: pd.DataFrame) -> bool:
 
 def transform_data(song_dictionary):
     song_df = pd.DataFrame(song_dictionary,columns = ["song_name","artist_name","played_at","timestamp"])
-
+    if song_df.empty:
+        return False
     # Assuming the original timestamps are in UTC
     utc_timezone = pytz.timezone('UTC')
     colombian_timezone = pytz.timezone('America/Bogota')
@@ -183,11 +184,13 @@ if __name__ == '__main__':
     if status_code == 200: 
         song_playlist = sort_data(music_played)
         song_df = transform_data(song_playlist)
-        check_if_valid_data(song_df)
-        print('Data valid, proceed to Load Stage')
-        if check_if_valid_data:
-            uploadData(song_df)
-
+        if song_df:
+            check_if_valid_data(song_df)
+            print('Data valid, proceed to Load Stage')
+            if check_if_valid_data:
+                uploadData(song_df)
+        else:
+            print("No songs donwloaded. Finishing execution")
 
     else:
         print(f'Response: {music_played}')
