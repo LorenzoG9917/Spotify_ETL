@@ -4,7 +4,7 @@
 Este proyecto tiene como objetivo obtener datos de las canciones reproducidas en las últimas 24 horas en Spotify y cargar estos datos en una base de datos PostgreSQL. Utiliza Flask para autorizar la aplicación con Spotify y Python para interactuar con la API de Spotify y la base de datos.
 
 ## Arquitectura
-
+![Spotify_ETL drawio](https://github.com/LorenzoG9917/Spotify_ETL/assets/121797266/a9a8f508-a6f8-409e-84c1-ab8e1fca3144)
 ## Requisitos del Sistema
 Asegúrate de tener instalado lo siguiente:
 - Python 3.x
