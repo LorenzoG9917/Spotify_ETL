@@ -49,9 +49,5 @@ Ejecuta el script spotify_api.py. Este script obtendrá datos de las canciones r
 ### Paso 7: Verificar la Base de Datos
 Puedes verificar la base de datos para asegurarte de que los datos se hayan cargado correctamente.
 
-## Agradecimientos
-
-- Agradecimientos especiales a [Karolina Sowinska](https://www.linkedin.com/in/karolina-sowinska-b3070b103/) por la creación de este proyecto con fines educativos.
-
 ## Autor
-Este proyecto ha sido desarrollado por [Lorenzo Guerrero](https://www.linkedin.com/in/lorenzoguerrero17/) con fines educativos.
+Este proyecto ha sido desarrollado por [Lorenzo Guerrero](https://www.linkedin.com/in/lorenzoguerrero17/).
